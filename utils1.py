@@ -15,6 +15,7 @@ def load_face_model():
     except OSError:
         face_model =  VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
         face_model.save("weights/face_recognition_model.h5")
+        face_model = load_model("weights/face_recognition_model.h5")
     return face_model
 
 def extract_face(pixels, required_size=(224, 224)):
