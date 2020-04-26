@@ -8,9 +8,9 @@ save the weights file as face_recognition_model.h5 in directory</br></br>
 ## **libraries recquired**
 tensorflow>=2.0.0 , mtcnn , flask , pillow</br></br>
 
-## **run app.py**
+## **run app.py**</br>
 
-![snip](snip.JPG)
+![snip](snip.JPG)</br>
 **to view database go to /names**
 
-![snip2](snip2.jpg)
+![snip2](snip2.JPG)
