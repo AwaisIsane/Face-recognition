@@ -10,7 +10,7 @@ tensorflow>=2.0.0 , mtcnn , flask , pillow</br></br>
 
 ## **run app.py**</br>
 
-![snip](snip.JPG)</br>
-**to view database go to /names**
+![snip](snip.JPG)</br></br>
+**##to view database go to "/names"**
 
 ![snip2](snip2.JPG)
