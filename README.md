@@ -11,5 +11,8 @@ tensorflow>=2.0.0 , mtcnn , flask , pillow</br></br>
 
 ![snip](snip.JPG)</br></br>
 **##to view database go to "/names"**
+![snip2](snip2.JPG)</br></br>
 
-![snip2](snip2.JPG)
+## we used cosine distance
+![snip3](snip3.JPG)
+
