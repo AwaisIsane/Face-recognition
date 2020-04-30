@@ -23,23 +23,25 @@ def result():
         file = request.files['filename1'].read() ## byte file
         npimg = np.fromstring(file, np.uint8)
         img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
-        if request.form['submit_button'] == 'add_to_database':
+        if request.form.get("submit_button") == 'add_to_database':
             check = add_to_database(img,username,database,model)
             np.save("database.npy",database)                
             return render_template("result.html", prediction = check)
-        elif request.form['submit_button'] == 'check_in_database':
+        elif request.form.get("submit_button") == 'check_in_database':
             try:
                 prediction=check_in_database(img,username,database,model)
                 return render_template("result.html", prediction = prediction)
             except KeyError:
                 return render_template("result.html", prediction = "username not found")
-        elif request.form['submit_button'] == 'delete_from_database':
+        elif request.form.get("submit_button") == 'delete_from_database':
             try: 
                 del database[username]
                 np.save("database.npy",database)  
                 return render_template("result.html", prediction = "DEleted")
             except KeyError:
                 return render_template("result.html", prediction = "Key already deleted")
+ 
+
                     
     return render_template("result.html", prediction = "exited") 
 
